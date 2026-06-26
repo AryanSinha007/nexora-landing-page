@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Build Modern Web Experiences — A professional landing page showcasing modern web design, development services, and creative portfolio." />
+  <title>Nexora — Build Modern Web Experiences</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__ring">
+      <div class="loader__ring-inner"></div>
+    </div>
+    <span class="loader__text">Nexora</span>
+  </div>
+
+  <!-- Page transition overlay (nav section changes) -->
+  <div id="page-transition" class="page-transition" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="navbar">
+    <nav class="navbar__inner container" aria-label="Main Navigation">
+      <a href="#hero" class="navbar__logo" id="logo">
+        <span class="navbar__logo-icon">◈</span> Nexora
+      </a>
+
+      <ul class="navbar__links" id="nav-links" role="menubar">
+        <li role="none"><a href="#hero" class="navbar__link active" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="navbar__link" role="menuitem">About</a></li>
+        <li role="none"><a href="#services" class="navbar__link" role="menuitem">Services</a></li>
+        <li role="none"><a href="#portfolio" class="navbar__link" role="menuitem">Portfolio</a></li>
+        <li role="none"><a href="#contact" class="navbar__link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <!-- Dark / Light mode toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle__icon" id="theme-icon">☀</span>
+      </button>
+
+      <!-- Hamburger button (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO SECTION ============ -->
+    <section id="hero" class="hero section--animate">
+      <div class="hero__bg-shapes" aria-hidden="true">
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+        <div class="hero__shape hero__shape--3"></div>
+      </div>
+      <div class="hero__content container">
+        <p class="hero__tag reveal">✦ Welcome to the future of web</p>
+        <h1 class="hero__title reveal">
+          Build Modern<br />
+          <span class="hero__title--gradient" id="typing-target"></span>
+          <span class="hero__cursor" aria-hidden="true">|</span>
+        </h1>
+        <p class="hero__description reveal">
+          We craft pixel-perfect digital products that blend stunning design
+          with cutting-edge technology — delivering experiences your users
+          will love.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#services" class="btn btn--primary" id="cta-explore">Explore Services</a>
+          <a href="#portfolio" class="btn btn--outline" id="cta-work">View Our Work</a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="about section section--animate">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Who We Are</span>
+          <h2 class="section__title">Crafting Digital <span class="gradient-text">Excellence</span></h2>
+          <p class="section__subtitle">
+            We're a passionate team of designers & developers building
+            the next generation of web experiences.
+          </p>
+        </header>
+
+        <div class="about__grid">
+          <!-- Left column -->
+          <div class="about__text reveal reveal--left">
+            <p>
+              Since 2018, Nexora has helped startups and enterprises transform
+              their digital presence. We combine strategic thinking with
+              creative execution to deliver products that drive real business
+              results.
+            </p>
+            <p>
+              Our approach is simple — listen deeply, design boldly, and
+              build with precision. Every pixel, every interaction, every
+              line of code is crafted with purpose.
+            </p>
+          </div>
+
+          <!-- Right column — Counter cards -->
+          <div class="about__counters reveal reveal--right">
+            <div class="counter-card">
+              <span class="counter-card__icon">🚀</span>
+              <span class="counter-card__number" data-target="150">0</span>
+              <span class="counter-card__suffix">+</span>
+              <span class="counter-card__label">Projects Delivered</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-card__icon">🤝</span>
+              <span class="counter-card__number" data-target="80">0</span>
+              <span class="counter-card__suffix">+</span>
+              <span class="counter-card__label">Happy Clients</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-card__icon">🏆</span>
+              <span class="counter-card__number" data-target="25">0</span>
+              <span class="counter-card__suffix">+</span>
+              <span class="counter-card__label">Awards Won</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-card__icon">👩‍💻</span>
+              <span class="counter-card__number" data-target="40">0</span>
+              <span class="counter-card__suffix">+</span>
+              <span class="counter-card__label">Team Members</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="about__features">
+          <div class="feature-card reveal reveal--scale reveal--delay-1">
+            <div class="feature-card__icon">⚡</div>
+            <h3 class="feature-card__title">Lightning Fast</h3>
+            <p class="feature-card__text">Optimised for performance with sub-second load times and smooth 60 fps animations.</p>
+          </div>
+          <div class="feature-card reveal reveal--scale reveal--delay-2">
+            <div class="feature-card__icon">🎨</div>
+            <h3 class="feature-card__title">Pixel Perfect</h3>
+            <p class="feature-card__text">Every element is meticulously crafted to ensure visual consistency across all devices.</p>
+          </div>
+          <div class="feature-card reveal reveal--scale reveal--delay-3">
+            <div class="feature-card__icon">🔒</div>
+            <h3 class="feature-card__title">Secure & Reliable</h3>
+            <p class="feature-card__text">Enterprise-grade security practices baked into every project from day one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section id="services" class="services section section--animate">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">What We Do</span>
+          <h2 class="section__title">Our <span class="gradient-text">Services</span></h2>
+          <p class="section__subtitle">
+            End-to-end digital solutions tailored to your unique vision.
+          </p>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card reveal reveal--left reveal--delay-1" id="service-design">
+            <div class="service-card__icon-wrap">
+              <span class="service-card__icon">🖌️</span>
+            </div>
+            <h3 class="service-card__title">UI / UX Design</h3>
+            <p class="service-card__text">
+              Research-driven interfaces that delight users and convert
+              visitors into loyal customers.
+            </p>
+            <ul class="service-card__list">
+              <li>User Research & Personas</li>
+              <li>Wireframing & Prototyping</li>
+              <li>Visual Design Systems</li>
+            </ul>
+            <span class="service-card__number">01</span>
+          </article>
+
+          <article class="service-card reveal reveal--scale reveal--delay-2" id="service-dev">
+            <div class="service-card__icon-wrap">
+              <span class="service-card__icon">💻</span>
+            </div>
+            <h3 class="service-card__title">Web Development</h3>
+            <p class="service-card__text">
+              Scalable, performant web applications built with modern
+              technologies and best practices.
+            </p>
+            <ul class="service-card__list">
+              <li>Frontend & Backend</li>
+              <li>Progressive Web Apps</li>
+              <li>API Integration</li>
+            </ul>
+            <span class="service-card__number">02</span>
+          </article>
+
+          <article class="service-card reveal reveal--right reveal--delay-3" id="service-brand">
+            <div class="service-card__icon-wrap">
+              <span class="service-card__icon">📈</span>
+            </div>
+            <h3 class="service-card__title">Brand Strategy</h3>
+            <p class="service-card__text">
+              Compelling brand identities that resonate with your target
+              audience and stand out in the market.
+            </p>
+            <ul class="service-card__list">
+              <li>Brand Identity Design</li>
+              <li>Content Strategy</li>
+              <li>Digital Marketing</li>
+            </ul>
+            <span class="service-card__number">03</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO SECTION ============ -->
+    <section id="portfolio" class="portfolio section section--animate">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Our Work</span>
+          <h2 class="section__title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section__subtitle">
+            A curated selection of our finest work across industries.
+          </p>
+        </header>
+
+        <div class="portfolio__grid">
+          <article class="portfolio-card reveal" id="project-1">
+            <div class="portfolio-card__image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              <div class="portfolio-card__placeholder">
+                <span>🌐</span>
+              </div>
+            </div>
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__category">Web App</span>
+              <h3 class="portfolio-card__title">FinTrack Dashboard</h3>
+              <p class="portfolio-card__desc">Real-time financial analytics platform with AI-powered insights.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" id="project-2">
+            <div class="portfolio-card__image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              <div class="portfolio-card__placeholder">
+                <span>🛍️</span>
+              </div>
+            </div>
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__category">E-Commerce</span>
+              <h3 class="portfolio-card__title">Luxe Boutique</h3>
+              <p class="portfolio-card__desc">Premium fashion e-commerce experience with AR try-on.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" id="project-3">
+            <div class="portfolio-card__image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+              <div class="portfolio-card__placeholder">
+                <span>📱</span>
+              </div>
+            </div>
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__category">Mobile App</span>
+              <h3 class="portfolio-card__title">HealthPulse</h3>
+              <p class="portfolio-card__desc">Wellness tracking app with personalized health recommendations.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" id="project-4">
+            <div class="portfolio-card__image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+              <div class="portfolio-card__placeholder">
+                <span>🏢</span>
+              </div>
+            </div>
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__category">SaaS</span>
+              <h3 class="portfolio-card__title">TeamSync Pro</h3>
+              <p class="portfolio-card__desc">Collaborative workspace for distributed teams with real-time sync.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" id="project-5">
+            <div class="portfolio-card__image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+              <div class="portfolio-card__placeholder">
+                <span>🎓</span>
+              </div>
+            </div>
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__category">EdTech</span>
+              <h3 class="portfolio-card__title">LearnSphere</h3>
+              <p class="portfolio-card__desc">Interactive learning platform with gamified course progression.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" id="project-6">
+            <div class="portfolio-card__image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+              <div class="portfolio-card__placeholder">
+                <span>🍽️</span>
+              </div>
+            </div>
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__category">Startup</span>
+              <h3 class="portfolio-card__title">FoodieMap</h3>
+              <p class="portfolio-card__desc">Hyper-local restaurant discovery with social dining features.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="contact section section--animate">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Get in Touch</span>
+          <h2 class="section__title">Let's Start a <span class="gradient-text">Conversation</span></h2>
+          <p class="section__subtitle">
+            Have a project in mind? We'd love to hear about it.
+          </p>
+        </header>
+
+        <div class="contact__wrapper reveal">
+          <form class="contact__form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="John Doe"
+                required
+                autocomplete="name"
+              />
+              <span class="form-error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="john@example.com"
+                required
+                autocomplete="email"
+              />
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell us about your project…"
+                required
+                rows="5"
+              ></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__icon">→</span>
+            </button>
+            <p class="form-success" id="form-success"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__logo">
+          <span class="navbar__logo-icon">◈</span> Nexora
+        </a>
+        <p class="footer__tagline">Building the digital future, one pixel at a time.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer Navigation">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h4 class="footer__heading">Follow Us</h4>
+        <div class="footer__social-icons">
+          <a href="#" class="social-icon" id="social-twitter" aria-label="Twitter / X">𝕏</a>
+          <a href="#" class="social-icon" id="social-github" aria-label="GitHub">⌥</a>
+          <a href="#" class="social-icon" id="social-linkedin" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" id="social-dribbble" aria-label="Dribbble">◉</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Nexora. All rights reserved.</p>
+      <p class="footer__credit">
+        Designed &amp; Developed with <span class="footer__heart" aria-hidden="true">♥</span> by
+        <strong class="footer__author">Aryan Sinha</strong>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ BACK-TO-TOP BUTTON ============ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
